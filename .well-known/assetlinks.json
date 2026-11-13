@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.guns4america.kdrama",
+      "sha256_cert_fingerprints": [
+        "C8:2D:BB:D5:1A:17:73:C2:00:D9:C7:1E:C4:5D:F7:D8:68:1F:29:FA:DF:BB:E5:B5:62:68:06:7B:16:22:61:30"
+      ]
+    }
+  }
+]
