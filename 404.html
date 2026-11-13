@@ -28,6 +28,15 @@ a.button{display:inline-block;border-radius:999px;padding:12px 24px;margin:10px 
 <script>
 (() => {
   const parts = location.pathname.split('/').filter(Boolean);
+  if(parts.length === 2 && parts[0] === 'friend' &&
+     /^KD-[A-HJ-NP-Z2-9]{10}$/.test(parts[1])) {
+    document.getElementById('heading').textContent = 'You have a friend invitation';
+    document.getElementById('summary').textContent =
+      'Install KDrama Companion and enter this invitation code in Profile → Friends: ' + parts[1];
+    document.getElementById('help').textContent =
+      'Your friend request is only sent after you choose to send it. Your watchlists and ratings remain private.';
+    return;
+  }
   if (parts.length !== 3 || parts[0] !== 'title' ||
       !['tv', 'movie'].includes(parts[1]) || !/^\d+$/.test(parts[2]) ||
       Number(parts[2]) < 100) return;
