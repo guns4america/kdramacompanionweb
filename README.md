@@ -22,21 +22,21 @@ For GitHub Pages: Repository → Settings → Pages → Deploy from a branch →
 
 - Responsive cinematic hero with a CSS-drawn mobile app preview inspired by actual app screenshots
 - Feature descriptions for discovery, episode tracking, watchlists, favorites, viewing insights, offline use, backups, and PDF export
-- Illustrated watchlist and insights sample panels
+- Real screenshot preview of the watchlist, with illustrated insights sample panel
 - FAQ, mobile navigation, metadata, accessibility considerations, favicon, and footer
 - Google Play **search** links as a safe placeholder until the exact live listing URL is confirmed
 
 ## Before announcing the site
 
 1. Replace all Google Play search URLs in `index.html` with the app's **verified direct listing URL**.
-2. Replace the illustrative previews with supplied optimized screenshots if you want a screenshot-led design. The sample title artwork in the hero and cards is generated with CSS and isn't intended to reproduce real title posters.
+2. The actual Android screenshots now appear in the hero, watchlist section and a swipeable gallery. Other illustrative panels still use CSS and do not reproduce real title posters.
 3. Add an accurate, publicly hosted privacy policy link after verifying its location.
 4. Replace the contact link with the desired support address or support page.
 5. Optionally add a custom domain in GitHub Pages.
 
 ### Screenshot suggestions
 
-The supplied screenshots show Home, Spotlight, Search, Discover filters, My List, Profile, Viewing Insights, Streaming Preferences, and Backup & Export. For a later iteration, use cropped screenshots converted to WebP/AVIF with meaningful alt text. Avoid publishing screenshots that reveal account email addresses.
+All nine supplied screenshots are included in `assets/` and displayed in the horizontal screenshot gallery. The homepage and watchlist sections also feature real screenshots. The Google account address displayed belongs to the developer's public contact account. For future optimization, convert screenshots to WebP/AVIF and preserve descriptive alt text.
 
 ## Credits
 
