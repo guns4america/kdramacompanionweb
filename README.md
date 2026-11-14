@@ -22,6 +22,7 @@ For GitHub Pages: Repository → Settings → Pages → Deploy from a branch →
 
 - Responsive cinematic hero with a CSS-drawn mobile app preview inspired by actual app screenshots
 - Feature descriptions for discovery, episode tracking, watchlists, favorites, viewing insights, offline use, backups, and PDF export
+- Friends showcase: invitations, recommendations, shared activity, watchlist comparisons, taste compatibility, and privacy settings
 - Real screenshot preview of the watchlist, with illustrated insights sample panel
 - FAQ, mobile navigation, metadata, accessibility considerations, favicon, and footer
 - Google Play **search** links as a safe placeholder until the exact live listing URL is confirmed
@@ -45,3 +46,12 @@ Title information in the mobile app is sourced from TMDB; the website notes that
 ## License
 
 All rights reserved to the project owner.
+
+
+## Friends refresh — November 2026
+
+The Friends section reflects functionality checked against the Android app source. Its comparison panel is an illustration, not an actual screenshot or real user data. Existing screenshots predate Friends and can be refreshed when current screenshots are supplied.
+
+All friend-sharing categories are disabled by default. Recommendations do not automatically alter the recipient's watchlist.
+
+The Google Play link is still a search-page placeholder until production is approved. Custom-domain and Android App Links verification are separate future tasks.
