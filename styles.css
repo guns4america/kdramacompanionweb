@@ -33,3 +33,45 @@
 .gallery-hint{font-size:12px;color:var(--pink-light);letter-spacing:.035em;margin-top:4px}
 @media(max-width:800px){.screenshot-card{flex-basis:230px}.actual-preview{max-width:340px}}
 @media(max-width:540px){.screenshot-gallery{gap:14px}.screenshot-card{flex-basis:210px}.actual-preview{max-width:290px}.real-screen img{object-fit:fill}}
+
+/* Friends feature showcase */
+.friends-section{background:radial-gradient(ellipse at 16% 30%,#47263e77,transparent 46%),linear-gradient(145deg,#17141e,#211b29 70%,#15131c);border-block:1px solid #ffffff10}
+.friends-intro{max-width:730px;margin-bottom:54px}
+.friends-intro h2{margin:16px 0;font-size:clamp(40px,4.5vw,60px)}
+.friends-intro>p{max-width:635px;color:var(--muted);line-height:1.85;font-size:16px}
+.friends-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:66px;align-items:center}
+.friends-demo{border:1px solid #654457;border-radius:24px;padding:26px;background:linear-gradient(145deg,#343042,#1d1c28);box-shadow:0 30px 70px #0006}
+.friends-demo-top{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:22px}
+.demo-kicker{color:var(--pink-light);font-size:11px;font-weight:800;letter-spacing:.13em}
+.demo-private{font-size:10px;color:#bba8ba}
+.demo-connection,.demo-recommend{display:flex;align-items:center;gap:13px;padding:17px;border:1px solid #625161;border-radius:16px;background:#282532}
+.demo-avatar{display:grid;place-items:center;flex:0 0 45px;height:45px;border-radius:50%;background:linear-gradient(135deg,#d46a98,#683e73);font-size:22px;color:#fff}
+.demo-connection>div,.demo-recommend>div{flex:1;min-width:0}
+.demo-connection strong,.demo-recommend strong{font-size:14px;display:block}
+.demo-connection small,.demo-recommend small{font-size:11px;color:#b8aebc;display:block;margin-top:5px;line-height:1.6}
+.demo-dot{width:10px;height:10px;background:#e68eae;border-radius:50%;box-shadow:0 0 0 5px #e68eae24}
+.demo-compare{padding:22px 19px;margin:16px 0;border:1px solid #6b475f;background:linear-gradient(120deg,#52334c,#332739);border-radius:17px}
+.demo-label{font-size:10px;font-weight:800;color:#ffb9d2;letter-spacing:.12em}
+.demo-match{display:flex;align-items:center;justify-content:space-between;gap:15px;margin:16px 0 12px}
+.demo-overlap{font:600 22px "Playfair Display",Georgia,serif}
+.demo-hearts{font-size:16px;white-space:nowrap;color:#ff91b8;letter-spacing:.18em}
+.demo-tracks{display:flex;gap:7px}
+.demo-tracks span{display:block;width:32%;height:6px;background:#f190b7;border-radius:6px}
+.demo-tracks span:nth-child(2){background:#e775a4}
+.demo-tracks span:nth-child(3){background:#ad668d}
+.demo-compare p{color:#c9b5c5;font-size:11px;line-height:1.6;margin:14px 0 0}
+.demo-recommend{background:#37303e}
+.demo-recommend-icon{flex:0 0 44px;height:44px;border-radius:11px;background:#71445f;color:#ffc0d6;display:grid;place-items:center;font-size:25px}
+.demo-footer{font-size:11px;color:#d2c0d1;text-align:center;margin-top:20px}
+.demo-footer span{margin-right:7px}
+.friends-benefits{display:grid;gap:24px}
+.friend-benefit{display:flex;gap:18px;align-items:flex-start}
+.friend-icon{display:grid;place-items:center;flex:0 0 52px;height:52px;border:1px solid #a06081;background:#543448;border-radius:14px;font-size:25px;color:#ff9ac0}
+.friend-benefit h3{font-size:19px;margin:3px 0 8px;line-height:1.3;letter-spacing:-.02em}
+.friend-benefit p{font-size:13px;line-height:1.8;color:#beb4c2;margin:0}
+.friends-privacy{display:flex;align-items:flex-start;gap:16px;background:#302738;border:1px solid #6b465b;border-radius:17px;padding:22px 25px;margin-top:45px}
+.privacy-icon{font-size:29px;color:var(--pink-light)}
+.friends-privacy strong{font-size:15px}
+.friends-privacy p{font-size:13px;color:#c6b8c8;line-height:1.75;margin:6px 0 0}
+@media(max-width:800px){.friends-grid{grid-template-columns:1fr;gap:42px}.friends-demo{max-width:550px;margin:0 auto;width:100%}.friends-benefits{grid-template-columns:1fr 1fr;gap:25px}.friends-intro{margin-bottom:35px}}
+@media(max-width:540px){.friends-benefits{grid-template-columns:1fr}.friends-demo{padding:18px}.friends-privacy{padding:19px;gap:11px}.friend-icon{flex-basis:46px;height:46px}.friends-intro h2{font-size:40px}.demo-private{font-size:9px}}
