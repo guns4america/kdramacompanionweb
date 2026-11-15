@@ -55,3 +55,9 @@ The Friends section reflects functionality checked against the Android app sourc
 All friend-sharing categories are disabled by default. Recommendations do not automatically alter the recipient's watchlist.
 
 The Google Play links now point directly to the production listing. Custom-domain and Android App Links verification are separate future tasks.
+
+## November 2026 feature refresh
+
+The website now highlights expanded streaming-service discovery, grouped provider preferences, and Google-account synchronization of streaming selections. It also explains that Friends can suggest a non-binding watch priority (Next, Soon, Later) and that recipients can opt in, per friend, to automatically add recommendations to Plan to Watch without recommendation notifications.
+
+The privacy-first claim remains: sharing watchlists, ratings, reviews, and favorite people starts off by default. Automatic recommendation saving is a separate, explicit per-friend option. The site uses an illustrative streaming-preferences panel; the existing nine screenshots remain unchanged until replacement screenshots are supplied.
