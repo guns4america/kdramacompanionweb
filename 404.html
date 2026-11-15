@@ -30,11 +30,33 @@ a.button{display:inline-block;border-radius:999px;padding:12px 24px;margin:10px 
   const parts = location.pathname.split('/').filter(Boolean);
   if(parts.length === 2 && parts[0] === 'friend' &&
      /^KD-[A-HJ-NP-Z2-9]{10}$/.test(parts[1])) {
+    document.title = 'Friend invitation | KDrama Companion';
     document.getElementById('heading').textContent = 'You have a friend invitation';
     document.getElementById('summary').textContent =
-      'Install KDrama Companion and enter this invitation code in Profile → Friends: ' + parts[1];
+      'Open this link in KDrama Companion to review the invitation. If you do not have the app yet, install it first.';
+    const code = parts[1];
+    const open = document.createElement('a');
+    open.className = 'button';
+    open.href = 'intent://kdramacompanion.com/friend/' + code +
+      '#Intent;scheme=https;package=com.guns4america.kdrama;end';
+    open.textContent = 'Open in KDrama Companion';
+    document.getElementById('actions').prepend(open);
+    const copy = document.createElement('button');
+    copy.textContent = 'Copy backup friend code';
+    copy.className = 'button secondary';
+    copy.style.border = '0';
+    copy.style.cursor = 'pointer';
+    copy.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(code);
+        copy.textContent = 'Code copied';
+      } catch (_) {
+        copy.textContent = 'Friend code: ' + code;
+      }
+    });
+    document.getElementById('actions').append(copy);
     document.getElementById('help').textContent =
-      'Your friend request is only sent after you choose to send it. Your watchlists and ratings remain private.';
+      'Sending a friend request always requires your confirmation. Your lists and ratings remain private.';
     return;
   }
   if (parts.length !== 3 || parts[0] !== 'title' ||
