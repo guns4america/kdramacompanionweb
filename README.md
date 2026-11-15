@@ -25,11 +25,11 @@ For GitHub Pages: Repository → Settings → Pages → Deploy from a branch →
 - Friends showcase: invitations, recommendations, shared activity, watchlist comparisons, taste compatibility, and privacy settings
 - Real screenshot preview of the watchlist, with illustrated insights sample panel
 - FAQ, mobile navigation, metadata, accessibility considerations, favicon, and footer
-- Google Play **search** links as a safe placeholder until the exact live listing URL is confirmed
+- Verified production Google Play listing links (`com.guns4america.kdrama`)
 
 ## Before announcing the site
 
-1. Replace all Google Play search URLs in `index.html` with the app's **verified direct listing URL**.
+1. Google Play buttons point to the production listing at `https://play.google.com/store/apps/details?id=com.guns4america.kdrama`.
 2. The actual Android screenshots now appear in the hero, watchlist section and a swipeable gallery. Other illustrative panels still use CSS and do not reproduce real title posters.
 3. Add an accurate, publicly hosted privacy policy link after verifying its location.
 4. Replace the contact link with the desired support address or support page.
@@ -54,4 +54,4 @@ The Friends section reflects functionality checked against the Android app sourc
 
 All friend-sharing categories are disabled by default. Recommendations do not automatically alter the recipient's watchlist.
 
-The Google Play link is still a search-page placeholder until production is approved. Custom-domain and Android App Links verification are separate future tasks.
+The Google Play links now point directly to the production listing. Custom-domain and Android App Links verification are separate future tasks.
