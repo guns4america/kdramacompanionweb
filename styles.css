@@ -108,3 +108,27 @@
 .showcase-shot span{display:block;text-align:center;margin-top:12px;font-size:12px;font-weight:700;color:#e5d5df;line-height:1.5}
 .gallery-shot-link{display:block;border-radius:25px}
 @media(max-width:540px){.showcase-shots{gap:10px}.showcase-shot img{border-width:3px;border-radius:15px}.showcase-shot span{font-size:11px}}
+
+/* Keep new Friends and streaming screenshots at the same visual scale as existing app previews. */
+.showcase-shots{
+  width:100%;
+  max-width:390px;
+  margin-inline:auto;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px;
+}
+.showcase-shot{min-width:0;max-width:100%;overflow:hidden}
+.showcase-shot img{
+  width:100%;
+  max-width:100%;
+  height:auto;
+  aspect-ratio:690 / 1536;
+  object-fit:contain;
+  border-radius:14px;
+}
+.screenshot-card{min-width:0}
+.gallery-shot-link,.gallery-shot-link .shot-image{width:100%;max-width:100%}
+.gallery-shot-link .shot-image img{width:100%;height:100%;object-fit:cover}
+@media(max-width:540px){
+  .showcase-shots{max-width:340px;gap:10px}
+}
