@@ -22,5 +22,17 @@
         "E2:93:4C:35:8F:9F:CB:9F:08:97:0B:C7:D6:6B:81:31:FE:E3:C3:BF:08:5E:32:1D:2E:88:28:CA:1B:98:3A:B7"
       ]
     }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.guns4america.edrama",
+      "sha256_cert_fingerprints": [
+        "6B:AE:45:1F:CA:CB:BC:02:AF:F4:89:34:08:7F:F9:6A:CA:9F:67:F8:AB:38:52:DB:CB:4A:86:0F:EB:3A:AD:15"
+      ]
+    }
   }
 ]
