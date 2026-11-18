@@ -28,6 +28,39 @@ a.button{display:inline-block;border-radius:999px;padding:12px 24px;margin:10px 
 <script>
 (() => {
   const parts = location.pathname.split('/').filter(Boolean);
+  if (parts[0] === 'edrama') {
+    const friend = parts.length === 3 && parts[1] === 'friend' && /^ED-[A-HJ-NP-Z2-9]{10}$/.test(parts[2]);
+    const title = parts.length === 4 && parts[1] === 'title' && ['tv','movie'].includes(parts[2]) && /^\d+$/.test(parts[3]) && Number(parts[3]) >= 100;
+    if (!friend && !title) { location.replace('/edrama/'); return; }
+    document.title = (friend ? 'Friend invitation' : 'Shared title') + ' | EDrama Companion';
+    document.querySelector('.brand').textContent = 'EDRAMA COMPANION';
+    document.getElementById('heading').textContent = friend ? 'An EDrama friend invitation' : 'A title worth sharing';
+    document.getElementById('summary').textContent = friend ? 'Open this invitation in EDrama Companion, or copy the friend code and enter it under Friends.' : 'View this title in EDrama Companion or on TMDb.';
+    document.querySelector('a.secondary').href = '/edrama/';
+    const actions = document.getElementById('actions');
+    const install = actions.querySelector('.button');
+    if (install) { install.href = '/edrama/'; install.textContent = 'About EDrama Companion'; }
+    const open = document.createElement('a');
+    open.className = 'button';
+    open.href = 'intent://kdramacompanion.com' + location.pathname + '#Intent;scheme=https;package=com.guns4america.edrama;end';
+    open.textContent = 'Open in EDrama Companion';
+    actions.prepend(open);
+    if (friend) {
+      const code=parts[2], copy=document.createElement('button');
+      copy.type='button';copy.className='button secondary';copy.style.cssText='border:0;cursor:pointer';
+      copy.textContent='Copy friend code';
+      copy.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(code);copy.textContent='Copied'}catch(e){copy.textContent=code}});
+      actions.appendChild(copy);
+    } else {
+      const catalog=document.createElement('a');catalog.className='button secondary';
+      catalog.href='https://www.themoviedb.org/'+parts[2]+'/'+parts[3];
+      catalog.textContent='View title on TMDb';catalog.rel='noopener noreferrer';actions.appendChild(catalog);
+    }
+    document.getElementById('help').textContent = 'EDrama is in development. App links will open the Android app once a compatible version is installed and verified.';
+    document.body.style.background='radial-gradient(ellipse at 55% 15%,#183d50,#101016 70%)';
+    return;
+  }
+
   if(parts.length === 2 && parts[0] === 'friend' &&
      /^KD-[A-HJ-NP-Z2-9]{10}$/.test(parts[1])) {
     document.title = 'Friend invitation | KDrama Companion';
